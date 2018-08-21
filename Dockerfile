@@ -1,5 +1,5 @@
 FROM frolvlad/alpine-oraclejdk8:latest
-MAINTAINER Audrius Karosevicius <audrius.karosevicius@gmail.com>
+MAINTAINER Andrius Semionovas <aneworld@gmail.com>
 
 ENV ANDROID_HOME=/opt/android-sdk 
 
@@ -17,3 +17,4 @@ RUN SDK_BUILD="4333796" SDK_CHECKSUM="8c7c28554a32318461802c1291d76fccfafde054" 
     && yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses \
     && chmod -R 777 $ANDROID_HOME
 
+RUN mkdir /tmp/gradle && chmod 777 /tmp/gradle
